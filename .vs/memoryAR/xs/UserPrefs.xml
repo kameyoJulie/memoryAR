@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{F0E2EE80-721C-9CD4-7B62-CF50297AEF83}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Vuforia/Editor/Scripts/VuforiaEditorScripts.asmdef">
+    <Files>
+      <File FileName="Assets/Vuforia/Editor/Scripts/VuforiaEditorScripts.asmdef" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="nombres24" size="10.000000 14.145162" />
+    <ImageTarget name="nombres23" size="10.000000 14.145162" />
+    <ImageTarget name="numero21" size="10.000000 14.145162" />
+    <ImageTarget name="numero20" size="10.000000 14.145162" />
+    <ImageTarget name="numero19" size="10.000000 14.145162" />
+    <ImageTarget name="numero18" size="10.000000 14.145162" />
+    <ImageTarget name="numero17" size="10.000000 14.145162" />
+    <ImageTarget name="numero16" size="10.000000 14.145162" />
+    <ImageTarget name="numero15" size="10.000000 14.145162" />
+    <ImageTarget name="numero14" size="10.000000 14.145162" />
+    <ImageTarget name="numero13" size="10.000000 14.145162" />
+    <ImageTarget name="numero12" size="10.000000 14.145162" />
+    <ImageTarget name="numero11" size="10.000000 14.145162" />
+    <ImageTarget name="numero10" size="10.000000 14.145162" />
+    <ImageTarget name="numero8" size="10.000000 14.145162" />
+    <ImageTarget name="numero7" size="10.000000 14.145162" />
+    <ImageTarget name="numero6" size="10.000000 14.145162" />
+    <ImageTarget name="numero5" size="10.000000 14.145162" />
+    <ImageTarget name="numero4" size="10.000000 14.145162" />
+    <ImageTarget name="numero3" size="10.000000 14.145162" />
+    <ImageTarget name="numero1" size="10.000000 14.145162" />
+    <ImageTarget name="numero2" size="10.000000 14.145162" />
+  </Tracking>
+</QCARConfig>
