@@ -19,6 +19,8 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 {
     #region PROTECTED_MEMBER_VARIABLES
 
+    public GameObject btnP1;
+    public GameObject btnP2;
     protected TrackableBehaviour mTrackableBehaviour;
     protected TrackableBehaviour.Status m_PreviousStatus;
     protected TrackableBehaviour.Status m_NewStatus;
@@ -72,8 +74,13 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
               firstPic = mTrackableBehaviour.TrackableName;
               Debug.Log("Première image :"+firstPic);
             } else {
-              if (mTrackableBehaviour.TrackableName == firstPic){
+              if (
+              (mTrackableBehaviour.TrackableName == "numero19" && firstPic == "nombres23") || (mTrackableBehaviour.TrackableName == "nombres23" && firstPic == "numero19") ||
+              (mTrackableBehaviour.TrackableName == "numero21" && firstPic == "numero20") || (mTrackableBehaviour.TrackableName == "numero20" && firstPic == "numero21")
+              ){//(mTrackableBehaviour.TrackableName == firstPic){
                 Debug.Log("POINT");
+                btnP1.SetActive(true);
+                btnP2.SetActive(true);
               } else {
                 Debug.Log("PAS POINT");
               }
@@ -88,7 +95,6 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             OnTrackingLost();
 
             //@@AT MEMORY_AR
-
             nbPics--;
             Debug.Log("NB PICS :"+nbPics);
             if(nbPics == 0){
@@ -96,7 +102,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
               Debug.Log("FIRST PIC CLEAN");
             }
 
-            
+
         }
         else
         {
@@ -137,6 +143,8 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
+        btnP1.SetActive(false);
+        btnP2.SetActive(false);
 
 
 
