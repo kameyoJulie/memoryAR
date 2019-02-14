@@ -17,6 +17,8 @@ using Vuforia;
 /// </summary>
 public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
 {
+    AudioSource m_MyAudioSource;
+
     #region PROTECTED_MEMBER_VARIABLES
 
     public GameObject btnP1;
@@ -28,12 +30,15 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     static int nbPics = 0;
     static string firstPic = "";
 
+
     #endregion // PROTECTED_MEMBER_VARIABLES
 
     #region UNITY_MONOBEHAVIOUR_METHODS
 
     protected virtual void Start()
     {
+        m_MyAudioSource = GetComponent<AudioSource>();
+
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
@@ -76,14 +81,22 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
             } else {
               if (
               (mTrackableBehaviour.TrackableName == "numero19" && firstPic == "nombres23") || (mTrackableBehaviour.TrackableName == "nombres23" && firstPic == "numero19") ||
-              (mTrackableBehaviour.TrackableName == "numero21" && firstPic == "numero20") || (mTrackableBehaviour.TrackableName == "numero20" && firstPic == "numero21")
-              ){//(mTrackableBehaviour.TrackableName == firstPic){
+              (mTrackableBehaviour.TrackableName == "numero21" && firstPic == "numero20") || (mTrackableBehaviour.TrackableName == "numero20" && firstPic == "numero21") ||
+              (mTrackableBehaviour.TrackableName == "numero18" && firstPic == "numero16") || (mTrackableBehaviour.TrackableName == "numero16" && firstPic == "numero18") ||
+              (mTrackableBehaviour.TrackableName == "numero17" && firstPic == "numero11") || (mTrackableBehaviour.TrackableName == "numero11" && firstPic == "numero17") ||
+              (mTrackableBehaviour.TrackableName == "numero14" && firstPic == "numero12") || (mTrackableBehaviour.TrackableName == "numero12" && firstPic == "numero14") ||
+              (mTrackableBehaviour.TrackableName == "numero15" && firstPic == "numero13") || (mTrackableBehaviour.TrackableName == "numero13" && firstPic == "numero14")
+              )
+                {//(mTrackableBehaviour.TrackableName == firstPic){
                 Debug.Log("POINT");
                 btnP1.SetActive(true);
                 btnP2.SetActive(true);
-              } else {
+                m_MyAudioSource.Play();
+
+                } else {
                 Debug.Log("PAS POINT");
-              }
+                m_MyAudioSource.Stop();
+                }
             }
 
 
